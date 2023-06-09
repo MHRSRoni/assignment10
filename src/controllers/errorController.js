@@ -13,6 +13,6 @@ exports.errorController = (err, req, res, next)=>{
     console.log("====> Error : ", error)
 
     //sending response to the server
-    !res.headersSent ?  res.status(code).json(msg) : console.log("====>","Error was not handled from Error Controller")
+    !res.headersSent ?  res.status(code).json({Error : msg}) : console.log("====>","Error was not handled from Error Controller")
     
 }

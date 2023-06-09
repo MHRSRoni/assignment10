@@ -14,8 +14,14 @@ const productSchema = new Schema({
         min : 0,
     },
     description : String,
+    owner : {
+        type : String,
+        required : true,
+        min : 3
+    }
 },{
     timestamps : true,
+    versionKey : false,
 })
 
 //creating product model
